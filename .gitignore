@@ -1,0 +1,57 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+bun.lock
+
+# Environment variables (NEVER commit these!)
+.deepdive/.env
+.env
+.env.local
+.env.*.local
+
+# Generated files
+.deepdive/diagrams/
+.deepdive/charts/
+.deepdive/reports/
+.deepdive/*.log
+
+# Skill package files (build artifacts)
+*.skill
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
