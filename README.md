@@ -19,6 +19,11 @@ DeepDive is a **universal skill** for AI coding agents (Claude Code, Cursor, Ope
 ## Installation
 
 ```bash
+npx skills add tosi-n/deepdive
+```
+
+Or with full URL:
+```bash
 npx skills add https://github.com/tosi-n/deepdive
 ```
 
@@ -244,17 +249,7 @@ deepdive/
     └── validate_query.py              # SQL safety checker
 ```
 
-## Installation
-
-Install via GitHub:
-
-```bash
-# Claude Code / OpenCode
-npx skills add https://github.com/tosi-n/deepdive
-
-# Or manual install
-git clone https://github.com/tosi-n/deepdive.git ~/.config/opencode/skills/deepdive
-```
+## Requirements
 
 ## Requirements
 
