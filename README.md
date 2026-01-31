@@ -2,7 +2,6 @@
 
 Transform any coding agent into a data analyst. DeepDive enables natural language database querying, automatic visualization, and self-learning query correction for PostgreSQL, MySQL, SQLite, BigQuery, Snowflake, and Redshift.
 
-[![Skill](https://img.shields.io/badge/Skill-Universal%20Data%20Agent-blue)](https://skills.sh)
 [![Databases](https://img.shields.io/badge/Databases-6%20Types-green)](./references/connectors.md)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](./LICENSE)
 
@@ -19,46 +18,8 @@ DeepDive is a **universal skill** for AI coding agents (Claude Code, Cursor, Ope
 
 ## Installation
 
-### Method 1: Vercel Skill Lab (Recommended)
-
 ```bash
-# Coming soon - submit your skill to Vercel Skill Lab
-# Users install via:
-npx skills add @vercel/deepdive-data-agent
-```
-
-### Method 2: Direct GitHub Install
-
-```bash
-# Claude Code
 npx skills add https://github.com/tosi-n/deepdive
-
-# Cursor
-# Copy deepdive/ folder to ~/.cursor/skills/
-
-# OpenCode  
-npx skills add https://github.com/tosi-n/deepdive
-
-# Generic (any agent supporting skills)
-git clone https://github.com/tosi-n/deepdive.git
-cp -r deepdive ~/.config/<agent>/skills/
-```
-
-### Method 3: Manual Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/tosi-n/deepdive.git
-
-# Copy to your agent's skills directory
-# For Claude Code:
-cp -r deepdive ~/.claude/skills/
-
-# For OpenCode:
-cp -r deepdive ~/.config/opencode/skills/
-
-# For Cursor:
-cp -r deepdive ~/.cursor/skills/
 ```
 
 ## Quick Start
@@ -283,60 +244,16 @@ deepdive/
     └── validate_query.py              # SQL safety checker
 ```
 
-## Distribution
+## Installation
 
-### Vercel Skill Lab
-
-To submit to [Vercel Skill Lab](https://vercel.com/marketplace/category/agents):
-
-1. **Prerequisites**:
-   - Vercel account
-   - GitHub repository with skill
-   - `SKILL.md` in root directory
-
-2. **Submission Process**:
-   ```bash
-   # Fork vercel-labs/agent-skills template
-   # Add your skill to skills/ directory
-   # Submit PR or use Vercel CLI
-   
-   npm i -g vercel
-   vercel skills publish ./deepdive
-   ```
-
-3. **Requirements**:
-   - YAML frontmatter in SKILL.md with `name` and `description`
-   - Clear trigger keywords in description
-   - Progressive disclosure (references/ folder)
-   - No extraneous files (no README, CHANGELOG in skill root)
-
-### Anthropic Skills Registry
-
-Submit to [skills.sh](https://skills.sh):
-
-1. Create release with `.skill` file (zip of skill directory)
-2. Submit via form or API
-3. Include: name, description, tags, GitHub URL
-
-### GitHub Distribution
-
-Direct installation works with most agents:
+Install via GitHub:
 
 ```bash
-# Users install with:
+# Claude Code / OpenCode
 npx skills add https://github.com/tosi-n/deepdive
 
-# Or git clone:
-git clone https://github.com/tosi-n/deepdive.git ~/.claude/skills/deepdive
-```
-
-### NPM Distribution (Optional)
-
-For CLI tooling alongside the skill:
-
-```bash
-npm install -g @tosi-n/deepdive-init
-# Provides: deepdive init, deepdive doctor, etc.
+# Or manual install
+git clone https://github.com/tosi-n/deepdive.git ~/.config/opencode/skills/deepdive
 ```
 
 ## Requirements
