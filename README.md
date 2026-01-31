@@ -266,11 +266,8 @@ deepdive/
 
 ## Security
 
-- **Credentials**: Stored in `.deepdive/.env` (never committed)
-- **Local Only**: No data sent to external APIs
 - **Read-First**: Write operations require explicit confirmation
-- **Audit Trail**: Query history logged locally
-- **No Training**: Your data doesn't train any models
+- **Local Data**: Query history stored in your project only
 
 ## Contributing
 
