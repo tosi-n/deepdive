@@ -2,6 +2,7 @@
 
 Transform any coding agent into a data analyst. DeepDive enables natural language database querying, automatic visualization, and self-learning query correction for PostgreSQL, MySQL, SQLite, BigQuery, Snowflake, and Redshift.
 
+[![Skill](https://img.shields.io/badge/Skill-Universal%20Data%20Agent-blue)](https://skills.sh)
 [![Databases](https://img.shields.io/badge/Databases-6%20Types-green)](./references/connectors.md)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](./LICENSE)
 
