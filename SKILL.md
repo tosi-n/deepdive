@@ -46,6 +46,14 @@ DATABASE_URL=postgresql://user:pass@localhost:5432/db
 - `@deepdive history` - Show recent queries
 - `@deepdive safe-mode [on|off]` - Require confirmation for writes (default: on)
 
+### Scope Design
+- `@deepdive scope "<business description>"` - Design data model scope
+  - `--template transactional|subscription|engagement` - Use generic category template
+  - `--discover` - Agent infers domain from existing database schema
+  - Generates: core entities, primary metrics, causal relationships, constraints, derived metrics
+  - Auto-triggers when exploratory analysis finds no existing framework
+- `@deepdive scope generate-schema` - Generate database schema from scope design
+
 ## Project Structure
 
 DeepDive creates and manages:
@@ -82,6 +90,7 @@ Read these files based on the task:
 - **Vega-Lite Charts**: [references/vega-charts.md](references/vega-charts.md)
 - **User Learning**: [references/user-learning.md](references/user-learning.md)
 - **Write Protection**: [references/write-protection.md](references/write-protection.md)
+- **Scope Design**: [references/scope-design.md](references/scope-design.md)
 - **Examples**: [references/examples.md](references/examples.md)
 
 ## Usage Patterns

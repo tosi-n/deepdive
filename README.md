@@ -76,7 +76,22 @@ REDSHIFT_USER=user
 REDSHIFT_PASSWORD=password
 ```
 
-### 3. Start Querying
+### 3. Design Your Data Scope (Optional)
+
+For new projects or when starting fresh:
+
+```bash
+# Define entities, metrics, and relationships
+@deepdive scope "I run a B2B SaaS company with subscription pricing"
+
+# Generates .deepdive/scope.yaml with:
+# - Core entities (Company, Subscription, Invoice)
+# - Primary metrics (MRR, Churn Rate, CAC)
+# - Causal relationships
+# - Constraints
+```
+
+### 4. Start Querying
 
 ```bash
 # Natural language queries
@@ -141,6 +156,7 @@ View learned patterns:
 | `@deepdive visualize erd` | Focused ERD |
 | `@deepdive visualize lineage` | Data flow diagram |
 | `@deepdive chart "<question>"` | Generate chart |
+| `@deepdive scope "<business description>"` | Design data model scope |
 | `@deepdive learn` | View learned corrections |
 | `@deepdive history` | Show query history |
 | `@deepdive safe-mode [on\|off]` | Toggle write protection |
@@ -242,6 +258,7 @@ deepdive/
 │   ├── mermaid-viz.md                 # Diagram generation
 │   ├── vega-charts.md                 # Chart specifications
 │   ├── user-learning.md               # Correction memory system
+│   ├── scope-design.md                # Data model scope design
 │   ├── write-protection.md            # Safety mechanisms
 │   └── examples.md                    # Real-world scenarios
 └── scripts/
