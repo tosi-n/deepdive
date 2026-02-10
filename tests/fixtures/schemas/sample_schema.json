@@ -1,0 +1,58 @@
+{
+  "tables": {
+    "users": {
+      "columns": [
+        {"name": "id", "type": "INT", "nullable": false},
+        {"name": "username", "type": "VARCHAR(50)", "nullable": false},
+        {"name": "email", "type": "VARCHAR(100)", "nullable": true},
+        {"name": "created_at", "type": "TIMESTAMP", "nullable": false, "default": "CURRENT_TIMESTAMP"}
+      ],
+      "primary_key": ["id"],
+      "foreign_keys": [],
+      "indexes": ["email"]
+    },
+    "posts": {
+      "columns": [
+        {"name": "id", "type": "INT", "nullable": false},
+        {"name": "user_id", "type": "INT", "nullable": false},
+        {"name": "title", "type": "VARCHAR(200)", "nullable": false},
+        {"name": "content", "type": "TEXT", "nullable": true},
+        {"name": "created_at", "type": "TIMESTAMP", "nullable": false}
+      ],
+      "primary_key": ["id"],
+      "foreign_keys": [
+        {
+          "column": "user_id",
+          "references_table": "users",
+          "references_column": "id",
+          "on_delete": "CASCADE"
+        }
+      ],
+      "indexes": ["user_id", "created_at"]
+    },
+    "comments": {
+      "columns": [
+        {"name": "id", "type": "INT", "nullable": false},
+        {"name": "post_id", "type": "INT", "nullable": false},
+        {"name": "user_id", "type": "INT", "nullable": false},
+        {"name": "content", "type": "TEXT", "nullable": false}
+      ],
+      "primary_key": ["id"],
+      "foreign_keys": [
+        {
+          "column": "post_id",
+          "references_table": "posts",
+          "references_column": "id",
+          "on_delete": "CASCADE"
+        },
+        {
+          "column": "user_id",
+          "references_table": "users",
+          "references_column": "id",
+          "on_delete": "CASCADE"
+        }
+      ],
+      "indexes": ["post_id", "user_id"]
+    }
+  }
+}

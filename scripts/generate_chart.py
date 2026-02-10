@@ -166,6 +166,8 @@ def build_vega_spec(data: List[Dict], chart_type: str, title: str, width: int, h
                 }
             }
         }
+    else:
+        return {}
     
     return spec
 

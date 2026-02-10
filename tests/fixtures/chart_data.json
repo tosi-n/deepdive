@@ -1,0 +1,38 @@
+{
+  "empty": [],
+  "single_item": [{"label": "A", "value": 10}],
+  "small_five_items": [
+    {"label": "A", "value": 10},
+    {"label": "B", "value": 20},
+    {"label": "C", "value": 15},
+    {"label": "D", "value": 25},
+    {"label": "E", "value": 30}
+  ],
+  "six_items": [
+    {"label": "A", "value": 10},
+    {"label": "B", "value": 20},
+    {"label": "C", "value": 15},
+    {"label": "D", "value": 25},
+    {"label": "E", "value": 30},
+    {"label": "F", "value": 35}
+  ],
+  "temporal_date": [
+    {"date": "2024-01-15", "sales": 1000},
+    {"date": "2024-02-15", "sales": 1500},
+    {"date": "2024-03-15", "sales": 2000}
+  ],
+  "temporal_time": [
+    {"timestamp": "2024-01-01 10:00:00", "count": 50},
+    {"timestamp": "2024-01-01 11:00:00", "count": 75}
+  ],
+  "numeric_scatter": [
+    {"x": 10, "y": 100},
+    {"x": 20, "y": 200},
+    {"x": 30, "y": 300},
+    {"x": 40, "y": 400}
+  ],
+  "mixed_types": [
+    {"name": "Item A", "count": 10},
+    {"name": "Item B", "count": 20}
+  ]
+}

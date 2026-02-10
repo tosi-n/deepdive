@@ -1,0 +1,46 @@
+{
+  "valid_queries": [
+    "SELECT id, name FROM users WHERE active = true",
+    "SELECT * FROM products WHERE price > 100",
+    "SELECT COUNT(*) FROM orders GROUP BY status"
+  ],
+  "write_operations": [
+    "INSERT INTO users (name) VALUES ('test')",
+    "UPDATE users SET active = false WHERE id = 1",
+    "DELETE FROM users WHERE id = 1",
+    "TRUNCATE TABLE users",
+    "DROP TABLE users",
+    "ALTER TABLE users ADD COLUMN age INT",
+    "CREATE TABLE test (id INT)",
+    "GRANT SELECT ON users TO analyst",
+    "REVOKE INSERT ON users FROM user"
+  ],
+  "dangerous_patterns": [
+    "SELECT *; DROP TABLE users",
+    "SELECT *; DELETE FROM users",
+    "SELECT * FROM users -- admin",
+    "SELECT * /* comment */ FROM users",
+    "SELECT * FROM users UNION SELECT * FROM admins",
+    "SELECT SLEEP(10)",
+    "SELECT BENCHMARK(1000, MD5('test'))"
+  ],
+  "common_mistakes": [
+    "SELECT * FROM users",
+    "SELECT * FROM users WHERE name = NULL"
+  ],
+  "syntax_errors": [
+    "SELECT * FROM users WHERE (id = 1",
+    "SELECT * FROM users WHERE name = 'test",
+    "SELECT COUNT(* FROM users"
+  ],
+  "query_types": [
+    {"query": "SELECT * FROM users", "type": "SELECT"},
+    {"query": "INSERT INTO users VALUES (1)", "type": "INSERT"},
+    {"query": "UPDATE users SET name = 'test'", "type": "UPDATE"},
+    {"query": "DELETE FROM users", "type": "DELETE"},
+    {"query": "CREATE TABLE test (id INT)", "type": "CREATE"},
+    {"query": "DROP TABLE users", "type": "DROP"},
+    {"query": "ALTER TABLE users ADD COLUMN age", "type": "ALTER"},
+    {"query": "WITH data AS (SELECT 1) SELECT * FROM data", "type": "CTE"}
+  ]
+}

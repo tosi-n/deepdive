@@ -4,6 +4,8 @@ Transform any coding agent into a data analyst. DeepDive enables natural languag
 
 [![Skill](https://img.shields.io/badge/Skill-Universal%20Data%20Agent-blue)](https://skills.sh)
 [![Databases](https://img.shields.io/badge/Databases-6%20Types-green)](./references/connectors.md)
+[![Tests](https://img.shields.io/badge/Tests-234%20passed-brightgreen)](#)
+[![Coverage](https://img.shields.io/badge/Coverage-89%25-brightgreen)](#)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](./LICENSE)
 
 ## Overview
